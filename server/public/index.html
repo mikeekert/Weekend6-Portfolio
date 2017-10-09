@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Projects</title>
-    <script src="vendors/angular.min.js" charset="utf-8"></script>
-    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
-    <script src="scripts/client.js" charset="utf-8"></script>
-    <script src="scripts/user.controller.js" charset="utf-8"></script>
-    <script src="scripts/github.service.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Tinos:700" rel="stylesheet">
-  </head>
-  <body ng-app="myApp">
-      <div class="container">
-        
-        <img class="intro__image" src='images/background-min.jpg'>
-        <ng-view></ng-view>
-        
-        <div class="footer-container">
-          <div class="content">
-            <h1>michael ekert</h1>
-              <div class='subtitles'>
-              <p>A collection of projects</p>
-                <div class="menu">
-                  <svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
-                    <g class="icon icon--grid">
-                      <rect x="32.5" y="5.5" width="22" height="22"/>
-                      <rect x="4.5" y="5.5" width="22" height="22"/>
-                      <rect x="32.5" y="33.5" width="22" height="22"/>
-                      <rect x="4.5" y="33.5" width="22" height="22"/>
-                    </g>
-                    <g class="icon icon--cross">
-                      <line x1="4.5" y1="55.5" x2="54.953" y2="5.046"/>
-                      <line x1="54.953" y1="55.5" x2="4.5" y2="5.047"/>
-                    </g>
-                  </svg>
-                </div>
-              </div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Projects</title>
+  <script src="vendors/angular.min.js" charset="utf-8"></script>
+  <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+  <script src="scripts/client.js" charset="utf-8"></script>
+  <script src="scripts/user.controller.js" charset="utf-8"></script>
+  <script src="scripts/index.controller.js" charset="utf-8"></script>
+
+  <script src="scripts/github.service.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Tinos:700" rel="stylesheet">
+</head>
+
+<body ng-app="myApp" ng-controller="IndexController as ic">
+  <div class="container">
+
+    <!-- <img class="intro__image" src='images/background-min.jpg'> -->
+    <ng-view ng-show="ic.visible"></ng-view>
+    <div class="footer-container">
+      <div class="content">
+        <a ng-href="/about">
+        <h1>michael ekert</h1>
+      </a>
+        <div class='subtitles'>
+          <p>
+            <a ng-href="{{ic.user.data.html_url}}">
+              A collection of projects</a>
+          </p>
+          <!-- <a href="/user"> -->
+          <div class="menu" ng-click="ic.visible = !ic.visible">
+            <svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
+              <g class="icon icon--grid">
+                <rect x="32.5" y="5.5" width="22" height="22" />
+                <rect x="4.5" y="5.5" width="22" height="22" />
+                <rect x="32.5" y="33.5" width="22" height="22" />
+                <rect x="4.5" y="33.5" width="22" height="22" />
+              </g>
+            </svg>
           </div>
-  
+        <!-- </a> -->
         </div>
+        <p id="repo">view projects</p>
       </div>
-  </body>
-  </body>
+    </div>
+  </div>
+</body>
+</body>
+
 </html>

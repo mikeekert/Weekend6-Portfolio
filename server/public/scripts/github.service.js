@@ -13,7 +13,7 @@ myApp.service('GithubService', function ($http) {
       console.log(response.data);
       self.user.data = response.data;
     });
-  }
+  };
 
   // Object that will store our repo data
   self.repos = { data: [] };
@@ -26,5 +26,5 @@ myApp.service('GithubService', function ($http) {
       console.log(response.data);
       self.repos.data = response.data;
     });
-  }
+  };
 });

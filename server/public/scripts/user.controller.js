@@ -9,4 +9,8 @@ myApp.controller('UserController', function (GithubService) {
   GithubService.githubProfile();
   GithubService.githubRepos();
 
+  
+  this.date = new Date();
+  
+
 });
