@@ -9,17 +9,23 @@
   <script src="scripts/client.js" charset="utf-8"></script>
   <script src="scripts/user.controller.js" charset="utf-8"></script>
   <script src="scripts/index.controller.js" charset="utf-8"></script>
+  <script src="scripts/about.controller.js" charset="utf-8"></script>
+  <script src="scripts/repo.controller.js" charset="utf-8"></script>
+  
+  
 
   <script src="scripts/github.service.js" charset="utf-8"></script>
   <link rel="stylesheet" href="./css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Tinos:700" rel="stylesheet">
+  <base href="/">
+  
 </head>
 
 <body ng-app="myApp" ng-controller="IndexController as ic">
   <div class="container">
 
     <!-- <img class="intro__image" src='images/background-min.jpg'> -->
-    <ng-view ng-show="ic.visible"></ng-view>
+    <ng-view></ng-view>
     <div class="footer-container">
       <div class="content">
         <a ng-href="/about">
@@ -30,7 +36,7 @@
             <a ng-href="{{ic.user.data.html_url}}">
               A collection of projects</a>
           </p>
-          <!-- <a href="/user"> -->
+          <a href="/repo">
           <div class="menu" ng-click="ic.visible = !ic.visible">
             <svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
               <g class="icon icon--grid">
@@ -41,7 +47,7 @@
               </g>
             </svg>
           </div>
-        <!-- </a> -->
+        </a>
         </div>
         <p id="repo">view projects</p>
       </div>
