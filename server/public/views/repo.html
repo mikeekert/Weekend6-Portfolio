@@ -1,7 +1,7 @@
 <div class = "userData">
         <div>  {{ rc.date | date:'yyyy-MM-dd HH:mm:ss Z'}} </div>
-    <div>/~ user$: {{rc.user.data.repos_url}}</div>
-    <div>/~ user$: ls -a</div>
+    <div>/~ user$: cd {{rc.user.data.repos_url}}</div>
+    <div>/api.github.com/users/mikeekert/repos user$: ls -a</div>
     <div class="preData">
             total repositories: {{rc.repos.data.length}} 
     </div>
