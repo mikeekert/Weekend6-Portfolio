@@ -1,3 +1,5 @@
+
+
 var myApp = angular.module('myApp', ['ngRoute']);
 
 /// Routes ///
@@ -9,4 +11,6 @@ myApp.config(function($routeProvider, $locationProvider) {
       templateUrl: '/views/user.html',
       controller: 'UserController as uc',
     });
+
+
 });
