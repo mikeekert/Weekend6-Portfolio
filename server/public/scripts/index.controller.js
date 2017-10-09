@@ -8,7 +8,6 @@ myApp.controller('IndexController', function (GithubService, $location) {
 
     // get profile and repo info on load
     GithubService.githubProfile();
-    GithubService.githubRepos();
 
     var repoToggle = true;
     var bioToggle = true;

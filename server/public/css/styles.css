@@ -169,4 +169,5 @@ svg {
 
 .biolink {
     cursor: pointer;
+    display: inline;
 }

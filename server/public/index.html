@@ -23,9 +23,9 @@
     <ng-view></ng-view>
     <div class="footer-container">
       <div class="content">
-        <a href="/about">
-          <h1 class="biolink">michael ekert</h1>
-        </a>
+        <!-- <a href="/about"> -->
+          <h1 class="biolink" ng-click="ic.toggleBio()">michael ekert</h1>
+        <!-- </a> -->
         <div class='subtitles'>
           <p>
             <a ng-href="{{ic.user.data.html_url}}">
